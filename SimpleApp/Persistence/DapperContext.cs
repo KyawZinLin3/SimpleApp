@@ -2,14 +2,11 @@
 using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Options;
-using SimpleApp.Helpers;
 
 namespace SimpleApp.Persistence
 {
     public class DapperContext
     {
-
-
         private readonly string _masterConnectionString;
         private readonly string _databaseConnectionString;
         private readonly string _databaseName;
@@ -21,7 +18,6 @@ namespace SimpleApp.Persistence
             _databaseConnectionString = configuration.GetConnectionString("DatabaseConnection")!;
         }
         public IDbConnection CreateConnection() => new SqlConnection(_databaseConnectionString);
-
 
         public async Task Init()
         {

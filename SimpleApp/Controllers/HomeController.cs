@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SimpleApp.Models;
+using SimpleApp.Repositories.Interface;
 using System.Diagnostics;
 
 namespace SimpleApp.Controllers
@@ -7,15 +8,19 @@ namespace SimpleApp.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IProductRepository _productRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,
+                              IProductRepository productRepository)
         {
             _logger = logger;
+            _productRepository = productRepository;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var products =await _productRepository.GetAllProducts();
+            return View(products);
         }
 
         public IActionResult Privacy()

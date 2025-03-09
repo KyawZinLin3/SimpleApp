@@ -28,14 +28,14 @@ namespace SimpleApp.Repositories.Implementation
             return await connection.QueryFirstOrDefaultAsync<Products>(query,new { Id = id});
         }
 
-        public async Task<int> AddProduct(ProductRepository product)
+        public async Task<int> AddProduct(Products product)
         {
             var query = "INSERT INTO Products (Name, Description, CreatedAt) VALUES (@Name, @Description, @CreatedAt)";
             using var connection = dapperContext.CreateConnection();
             return await connection.ExecuteScalarAsync<int>(query, product);
         }
 
-        public async Task<int> UpdateProduct(ProductRepository product)
+        public async Task<int> UpdateProduct(Products product)
         {
             var query = "UPDATE Products SET Name = @Name, Description = @Description, CreatedAt = @CreatedAt WHERE Id = @Id";
             using var connection = dapperContext.CreateConnection();
