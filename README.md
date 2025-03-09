@@ -17,7 +17,7 @@ cd your-repo
 dotnet restore
 dotnet build
 ```
-## ⚙️ Configuration
+##  Configuration
 
 Set up or edit your sql server connection strings in a `appsettings.json` file,:
 
