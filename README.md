@@ -12,7 +12,7 @@ Product CRUD feature app for code assignment.
 Follow these steps to set up the project locally:
 
 ```sh
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/KyawZinLin3/SimpleApp.git
 cd your-repo
 dotnet restore
 dotnet build
