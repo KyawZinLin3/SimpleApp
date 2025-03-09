@@ -18,9 +18,9 @@ dotnet build
 ```
 ## ⚙️ Configuration
 
-Set up your sql server connection strings in a `appseetings.josn` file,:
+Set up or edit your sql server connection strings in a `appsettings.json` file,:
 
-```appsettings.josn
+```appsettings.json
 "ConnectionStrings": {
   "DefaultConnection": "localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;TrustServerCertificate=True;",
   "DatabaseConnection": "localhost\\SQLEXPRESS;Database=SimpleAppDb;Trusted_Connection=True;TrustServerCertificate=True;"
