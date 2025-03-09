@@ -23,8 +23,8 @@ Set up or edit your sql server connection strings in a `appsettings.json` file,:
 
 ```appsettings.json
 "ConnectionStrings": {
-  "DefaultConnection": "localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;TrustServerCertificate=True;",
-  "DatabaseConnection": "localhost\\SQLEXPRESS;Database=SimpleAppDb;Trusted_Connection=True;TrustServerCertificate=True;"
+  "DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;TrustServerCertificate=True;",
+  "DatabaseConnection": "Server=localhost\\SQLEXPRESS;Database=SimpleAppDb;Trusted_Connection=True;TrustServerCertificate=True;"
 }
 ```
 
