@@ -4,7 +4,8 @@ Product CRUD feature app for code assignment.
 
 ##  Features
 
-- **Product CRUD**: product data can create, update, view and delete. 
+- **Product CRUD**: product data can create, update, view and delete.
+- **Dapper Auto Create**: dapper orm will create database and table automatically when you run the project.
 
 ##  Installation
 
